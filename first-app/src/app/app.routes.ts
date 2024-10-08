@@ -9,7 +9,7 @@ export const routes: Routes = [
 //    { path: 'about', component: AboutComponent }
 // {path:'about/:id',component:AboutComponent}
 
-//todo: Lazy Loading-start(Creates new chunk of data on every Load)
+//todo: Lazy Loading-start(Creates new chunk of data on every Load in contrast to the other way)
     {
         path:'',
        loadComponent:()=>import('./home/home.component').then((c)=>c.HomeComponent),

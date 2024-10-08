@@ -2,4 +2,12 @@
     <p>Hello world</p>
   </div>
   
-  <p>Hello Hell</p>
+  <p>Hello Hell</p> 
+
+  <p style="color: red;">This is a test</p>
+  <!-- <a routerLink="/about">Go to About</a>  --> <!-- $ This is Better -->
+<a [routerLink]="['/','about',val]">Go to About</a> <!-- $ This is Dynamic & Used in :id -->
+
+<!-- <a (click)="navigate()">Go to About</a> --> <br> <!-- #This passes the router link to the  Home Component.ts file where it works through Injection -->
+
+

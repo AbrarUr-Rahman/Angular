@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first-app-ngmodule';
+  
+  title="Code With Abrar";
+
+  //#Constructor
+  //*Loads First on load
+  constructor(){
+    console.log('constructor')
+  }
+
+  //!Life Cycle
+  //*Loads after constructor
+  ngOnInit(){
+    console.log('ngoninit')
+    // this.changeTitle();
+  }
+
+  changeTitle(){
+    this.title="Coding Techniques"
+  }
 }

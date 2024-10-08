@@ -1,0 +1,6 @@
+ng new *some_name(Creates new Angular App)
+ng --version
+ng serve(Starts the app)
+ng serve-o(Starts App & Opens in new window)
+ng serve --port 4200(Starts app in designated port;Default:4200)
+ng generate component *some_name/ng g c*some_name(Generates new component)

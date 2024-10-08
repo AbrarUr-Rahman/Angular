@@ -1,9 +1,19 @@
-.hello{
-    p{
-        color: blue;
+@mixin flex-center{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+@mixin font-big{
+    font-size: 1.5rem;
+}
+.type{
+    @include flex-center();
+    @include font-big();
+    h1{
+
     }
 }
-p{
-    color:red;
+button.title{
+    background-color: green;
+    color:white
 }
-

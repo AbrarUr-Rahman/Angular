@@ -1,0 +1,66 @@
+<!--$ If-else  -->
+<!--!Before -->
+<div *ngIf="loggedIn; else anonymousUser">
+    The user is logged In
+</div>
+<ng-template #anonymousUser>
+    The user is not logged in
+</ng-template>
+
+<!--! After  -->
+@if(loggedIn){
+    The user is logged in
+}
+@else{
+    The user is not logged in
+}
+
+<!--$For Loop  -->
+<!--! Before  -->
+<div *ngIf="users?.length==0">
+    Empty list of 
+    <ng-container *ngFor="let user of users;">
+        {{user.name}}
+    </ng-container>
+</div>
+<br/>
+
+<!--!After  -->
+@for(user of users;track user.id){
+    {{user.name}}
+}
+@empty{
+    Empty list of users
+}
+<!--$ Indexing  -->
+<!--! Before:Using NgFor with index -->
+<ul>
+    <li *ngFor="let user of users;let i=index">
+        {{i+1}}:{{user.name}}
+    </li>
+</ul>
+<!--!After: Using @for  -->
+<ul>
+    @for(user of users;track user.id){
+        <li>
+            {{index+1}}:{{user.name}}
+        </li>
+    }
+</ul>
+
+<!--$ Switch Case  -->
+<!--! Before  -->
+<ng-container  [ngSwitch]="accessLevel" >
+    <p *ngSwitchCase="'admin'" >sadsa</p>
+    <p *ngSwitchCase="'moderator'" >sadsasadsa</p>
+    <p *ngSwitchCase="'moderator'" >frfads</p>
+    
+
+</ng-container>
+
+<!--!After  -->
+@switch(accessLevel){
+    @case('admin'){<p>sadsa</p>}
+    @case('moderator'){<p>sadddsa</p>}
+    @default{<p>frfads</p>}
+}

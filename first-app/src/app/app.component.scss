@@ -17,3 +17,7 @@ button.title{
     background-color: green;
     color:white
 }
+.header{
+    @include flex-center();
+    color: blue;
+}

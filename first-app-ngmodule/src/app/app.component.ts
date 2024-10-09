@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,22 +9,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  title="Code With Abrar";
+  //@ title="Code With Abrar";
 
-  //#Constructor
-  //*Loads First on load
-  constructor(){
-    console.log('constructor')
-  }
+  // //#Constructor
+  // //*Loads First on load
+  // constructor(){
+  //   console.log('constructor')
+  // }
 
-  //!Life Cycle
-  //*Loads after constructor
-  ngOnInit(){
-    console.log('ngoninit')
-    // this.changeTitle();
-  }
+  // //!Life Cycle
+  // //*Loads after constructor
+  // ngOnInit(){
+  //   console.log('ngoninit')
+  //   // this.changeTitle();
+  // }
 
-  changeTitle(){
-    this.title="Coding Techniques"
-  }
+  // changeTitle(){
+  //   this.title="Coding Techniques"
+  //@ }
+
+
 }

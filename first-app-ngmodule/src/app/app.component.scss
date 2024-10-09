@@ -17,3 +17,10 @@ button.title{
     background-color: green;
     color:white
 }
+
+h1.header{
+    @include flex-center();
+    color: purple;
+
+
+}
